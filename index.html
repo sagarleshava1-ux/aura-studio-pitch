@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aura Studio — cinematic ads, no film crew</title>
+<meta name="description" content="Photoreal cinematic video ads made without a camera, a crew, or a location. One product photo in, a finished ad out.">
+<meta property="og:title" content="Aura Studio — cinematic ads, no film crew">
+<meta property="og:description" content="No camera. No crew. No location. This was made on a laptop.">
+<meta property="og:image" content="poster.jpg">
+<meta property="og:type" content="video.other">
+<style>
+:root{--bg:#0c0c0e;--fg:#f2f0ec;--dim:#9a978f;--accent:#e0623a;--line:#26262a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:56px 24px 96px}
+.eyebrow{color:var(--accent);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+h1{font-size:clamp(30px,6vw,54px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 18px;font-weight:700}
+.sub{color:var(--dim);font-size:clamp(16px,2.2vw,19px);max-width:52ch}
+.hero{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;margin-top:44px}
+@media(min-width:860px){.hero{grid-template-columns:340px 1fr}}
+video{width:100%;border-radius:14px;display:block;background:#000;border:1px solid var(--line)}
+.note{color:var(--dim);font-size:13px;margin-top:10px}
+.claims{list-style:none;margin:26px 0 0}
+.claims li{padding:11px 0;border-top:1px solid var(--line);display:flex;gap:12px}
+.claims li:last-child{border-bottom:1px solid var(--line)}
+.claims b{color:var(--accent);flex:0 0 auto;font-weight:600}
+section{margin-top:64px}
+h2{font-size:22px;letter-spacing:-.01em;margin-bottom:16px}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.step{border:1px solid var(--line);border-radius:12px;padding:18px}
+.step span{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.1em}
+.step p{color:var(--dim);font-size:14px;margin-top:8px}
+.cta{margin-top:64px;border:1px solid var(--line);border-radius:16px;padding:32px;background:#131316}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;margin-top:18px}
+.btn:hover{opacity:.9}
+footer{margin-top:64px;color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Aura Studio</p>
+  <h1>No camera. No crew.<br>No location. No actor.</h1>
+  <p class="sub">Everything below was made on a laptop. If I can shoot a jungle and a dinosaur that never existed, I can shoot your product exactly the way you imagined it.</p>
+
+  <div class="hero">
+    <div>
+      <video src="reel.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+      <p class="note">27 seconds · sound on</p>
+    </div>
+    <ul class="claims">
+      <li><b>Same face, every shot.</b><span>Character consistency is the hard part. That's the whole demo.</span></li>
+      <li><b>Real camera language.</b><span>Handheld chase, low-angle reveal, rack focus — not a slideshow.</span></li>
+      <li><b>Shot in 9:16.</b><span>Built for Reels, TikTok and Meta ads, not cropped down to them.</span></li>
+      <li><b>Days, not months.</b><span>No booking, no reshoot, no weather.</span></li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><span>01</span><p>You send one clear photo of your product, and one line about who it's for.</p></div>
+      <div class="step"><span>02</span><p>I write three concepts and send them back. You pick one.</p></div>
+      <div class="step"><span>03</span><p>You get a finished 15-second vertical ad, ready to upload.</p></div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>The first one is free.</h2>
+    <p class="sub">I'll make one ad for your product at no cost and with nothing attached. If it earns a place in your feed, the next ones are paid. If it doesn't, delete it and we're done.</p>
+    <a class="btn" href="mailto:sreevidhyakeshava@gmail.com?subject=Send%20me%20the%20free%20one">Send me a product photo</a>
+  </div>
+
+  <footer>Aura Studio · cinematic video ads, made without a shoot.</footer>
+
+</div>
+</body>
+</html>
