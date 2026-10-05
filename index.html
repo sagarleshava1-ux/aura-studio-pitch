@@ -3,77 +3,286 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aura Studio — cinematic ads, no film crew</title>
-<meta name="description" content="Photoreal cinematic video ads made without a camera, a crew, or a location. One product photo in, a finished ad out.">
-<meta property="og:title" content="Aura Studio — cinematic ads, no film crew">
-<meta property="og:description" content="No camera. No crew. No location. This was made on a laptop.">
+<title>Aura Studio — product photos and reels, no photoshoot</title>
+<meta name="description" content="Your product on a model, in a real-looking setting, without a photoshoot. AI product images and short reels for Indian sellers and brands.">
+<meta property="og:title" content="Aura Studio — product photos and reels, no photoshoot">
+<meta property="og:description" content="One photo of your product in. A set of ready-to-post shots out. See the work.">
 <meta property="og:image" content="poster.jpg">
-<meta property="og:type" content="video.other">
+<meta property="og:type" content="website">
 <style>
-:root{--bg:#0c0c0e;--fg:#f2f0ec;--dim:#9a978f;--accent:#e0623a;--line:#26262a}
+:root{--bg:#0c0c0e;--fg:#f2f0ec;--dim:#9a978f;--accent:#e0623a;--line:#26262a;--card:#131316;--wa:#25d366}
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:940px;margin:0 auto;padding:56px 24px 96px}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
 .eyebrow{color:var(--accent);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
-h1{font-size:clamp(30px,6vw,54px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 18px;font-weight:700}
-.sub{color:var(--dim);font-size:clamp(16px,2.2vw,19px);max-width:52ch}
-.hero{display:grid;grid-template-columns:1fr;gap:40px;align-items:start;margin-top:44px}
-@media(min-width:860px){.hero{grid-template-columns:340px 1fr}}
-video{width:100%;border-radius:14px;display:block;background:#000;border:1px solid var(--line)}
-.note{color:var(--dim);font-size:13px;margin-top:10px}
-.claims{list-style:none;margin:26px 0 0}
-.claims li{padding:11px 0;border-top:1px solid var(--line);display:flex;gap:12px}
-.claims li:last-child{border-bottom:1px solid var(--line)}
-.claims b{color:var(--accent);flex:0 0 auto;font-weight:600}
-section{margin-top:64px}
-h2{font-size:22px;letter-spacing:-.01em;margin-bottom:16px}
-.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.step{border:1px solid var(--line);border-radius:12px;padding:18px}
+h1{font-size:clamp(30px,7vw,56px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 18px;font-weight:700}
+h2{font-size:clamp(22px,4vw,30px);letter-spacing:-.01em;margin-bottom:10px;line-height:1.2}
+.sub{color:var(--dim);font-size:clamp(16px,2.2vw,19px);max-width:56ch}
+section{padding-top:72px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(12,12,14,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:700;letter-spacing:.02em;text-decoration:none}
+.brand span{color:var(--accent)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:10px;border:0;font-size:16px;cursor:pointer}
+.btn:hover{opacity:.92}
+.btn.wa{background:var(--wa);color:#07210f}
+.btn.small{padding:9px 16px;font-size:14px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* hero */
+.hero{padding-top:44px}
+.hero-grid{display:grid;gap:36px;margin-top:36px;align-items:start}
+@media(min-width:860px){.hero-grid{grid-template-columns:1fr 320px}}
+.hero-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.hero-imgs img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.hero-imgs img:nth-child(2){margin-top:22px}
+.trust{list-style:none;margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--dim);font-size:14px}
+.trust li::before{content:"✓ ";color:var(--accent);font-weight:700}
+
+/* work */
+.niche{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:26px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.niche h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.niche p{color:var(--dim);font-size:14px}
+.set{margin-top:40px}
+.set-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.set-head h4{font-size:19px}
+.set-head span{color:var(--dim);font-size:13px}
+.rail{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 20px 14px;margin:0 -20px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.shot{flex:0 0 68%;max-width:290px;scroll-snap-align:start;position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:zoom-in;padding:0;color:inherit;text-align:left}
+@media(min-width:700px){.shot{flex-basis:260px}}
+.shot img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#1a1a1e}
+.shot.orig img{aspect-ratio:3/4;object-fit:cover}
+.tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:99px;background:rgba(12,12,14,.8);border:1px solid var(--line)}
+.tag.ai{background:var(--accent);border-color:var(--accent);color:#fff}
+.shot.orig{border-color:#3a3a40}
+.shot.orig .cap{padding:10px 12px;font-size:13px;color:var(--dim)}
+.hint{color:var(--dim);font-size:13px;margin-top:2px}
+.more{margin-top:34px;padding:18px 20px;border:1px dashed var(--line);border-radius:12px;color:var(--dim);font-size:15px}
+.more b{color:var(--fg)}
+
+/* services + steps */
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--card)}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{color:var(--dim);font-size:15px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:22px}
+.step{border:1px solid var(--line);border-radius:12px;padding:20px}
 .step span{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.1em}
-.step p{color:var(--dim);font-size:14px;margin-top:8px}
-.cta{margin-top:64px;border:1px solid var(--line);border-radius:16px;padding:32px;background:#131316}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;margin-top:18px}
-.btn:hover{opacity:.9}
-footer{margin-top:64px;color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+.step p{color:var(--dim);font-size:15px;margin-top:8px}
+
+/* reel */
+.reel{display:grid;gap:28px;margin-top:22px;align-items:center}
+@media(min-width:760px){.reel{grid-template-columns:300px 1fr}}
+video{width:100%;border-radius:14px;background:#000;border:1px solid var(--line)}
+
+/* cta */
+.cta{margin-top:72px;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,40px);background:var(--card)}
+.cta .sub{margin-top:6px}
+.contact{margin-top:18px;color:var(--dim);font-size:15px}
+.contact a{color:var(--fg)}
+footer{margin:56px 0 0;color:var(--dim);font-size:13px;border-top:1px solid var(--line);padding:20px 0 96px}
+
+/* floating whatsapp (mobile) */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+@media(min-width:860px){.fab{display:none}}
+
+/* lightbox */
+dialog{border:0;background:transparent;max-width:100vw;max-height:100vh;padding:0;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.92)}
+.lb{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px}
+.lb img{max-height:84vh;width:auto;max-width:94vw;border-radius:10px}
+.lb p{color:var(--dim);font-size:13px}
+.lb .x{position:absolute;top:6px;right:6px;width:40px;height:40px;border-radius:99px;border:1px solid var(--line);background:rgba(12,12,14,.85);color:#fff;font-size:20px;cursor:pointer}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <p class="eyebrow">Aura Studio</p>
-  <h1>No camera. No crew.<br>No location. No actor.</h1>
-  <p class="sub">Everything below was made on a laptop. If I can shoot a jungle and a dinosaur that never existed, I can shoot your product exactly the way you imagined it.</p>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Aura <span>Studio</span></a>
+    <a class="btn wa small" href="https://wa.me/917483870039?text=Hi%20Aura%20Studio%2C%20I%20saw%20your%20work.%20I%27d%20like%20a%20sample%20for%20my%20products." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
 
-  <div class="hero">
-    <div>
-      <video src="reel.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
-      <p class="note">27 seconds · sound on</p>
+<main id="top">
+
+  <!-- HERO -->
+  <div class="wrap hero">
+    <p class="eyebrow">Aura Studio</p>
+    <h1>Your product on a model.<br>No photoshoot.</h1>
+    <p class="sub">Send one clear photo of your saree, kurti or lehenga. Get back a set of ready-to-post shots in real-looking locations, in days instead of weeks.</p>
+    <div class="btns">
+      <a class="btn wa" href="https://wa.me/917483870039?text=Hi%20Aura%20Studio%2C%20I%20saw%20your%20work.%20I%27d%20like%20a%20sample%20for%20my%20products." target="_blank" rel="noopener">Message me on WhatsApp</a>
+      <a class="btn ghost" href="#work">See the work</a>
     </div>
-    <ul class="claims">
-      <li><b>Same face, every shot.</b><span>Character consistency is the hard part. That's the whole demo.</span></li>
-      <li><b>Real camera language.</b><span>Handheld chase, low-angle reveal, rack focus — not a slideshow.</span></li>
-      <li><b>Shot in 9:16.</b><span>Built for Reels, TikTok and Meta ads, not cropped down to them.</span></li>
-      <li><b>Days, not months.</b><span>No booking, no reshoot, no weather.</span></li>
+    <ul class="trust">
+      <li>Your exact product, not a lookalike</li>
+      <li>Shot in 9:16 for Reels and Stories</li>
+      <li>2 rounds of changes included</li>
     </ul>
+
+    <div class="hero-grid" style="grid-template-columns:1fr">
+      <div class="hero-imgs">
+        <img src="images/red-2.webp" alt="AI-generated shot of a red embroidered suit" width="900" height="1612" fetchpriority="high">
+        <img src="images/gold-1.webp" alt="AI-generated shot of a gold lehenga" width="900" height="1612" fetchpriority="high">
+        <img src="images/purple-6.webp" alt="AI-generated shot of a purple organza saree" width="900" height="1612" fetchpriority="high">
+      </div>
+    </div>
   </div>
 
-  <section>
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step"><span>01</span><p>You send one clear photo of your product, and one line about who it's for.</p></div>
-      <div class="step"><span>02</span><p>I write three concepts and send them back. You pick one.</p></div>
-      <div class="step"><span>03</span><p>You get a finished 15-second vertical ad, ready to upload.</p></div>
+  <!-- WORK -->
+  <section id="work">
+    <div class="wrap">
+      <h2>The work</h2>
+      <p class="sub">Each set starts with one original product photo. Everything after it is AI-generated from that photo. Tap any image to see it full size.</p>
+
+      <div class="niche">
+        <h3>Ethnic wear</h3>
+        <p>Sarees · kurtis · lehengas</p>
+      </div>
+
+      <!-- RED -->
+      <div class="set">
+        <div class="set-head"><h4>Red embroidered suit</h4><span>1 original → 3 shots</span></div>
+        <div class="rail">
+          <button class="shot orig" data-full="images/red-original.webp" data-cap="Original product photo: red embroidered suit">
+            <span class="tag">Original</span>
+            <img src="images/red-original.webp" alt="Original product photo of a red embroidered suit" width="900" height="1207" loading="lazy">
+            <div class="cap">Original product photo</div>
+          </button>
+          <button class="shot" data-full="images/red-1.webp" data-cap="AI-generated: red suit, garden gate"><span class="tag ai">AI shot</span><img src="images/red-1.webp" alt="AI-generated shot of the red suit against yellow flowers and blue sky" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/red-2.webp" data-cap="AI-generated: red suit, palm leaves"><span class="tag ai">AI shot</span><img src="images/red-2.webp" alt="AI-generated close portrait in the red suit with palm leaves behind" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/red-3.webp" data-cap="AI-generated: red suit, mustard field"><span class="tag ai">AI shot</span><img src="images/red-3.webp" alt="AI-generated shot of the red suit seated in a mustard field" width="900" height="1612" loading="lazy"></button>
+        </div>
+      </div>
+
+      <!-- GOLD -->
+      <div class="set">
+        <div class="set-head"><h4>Gold tissue lehenga</h4><span>1 original → 4 shots</span></div>
+        <div class="rail">
+          <button class="shot orig" data-full="images/gold-original.webp" data-cap="Original product photo: gold tissue lehenga">
+            <span class="tag">Original</span>
+            <img src="images/gold-original.webp" alt="Original product photo of a gold tissue lehenga" width="900" height="1214" loading="lazy">
+            <div class="cap">Original product photo</div>
+          </button>
+          <button class="shot" data-full="images/gold-1.webp" data-cap="AI-generated: gold lehenga, staircase"><span class="tag ai">AI shot</span><img src="images/gold-1.webp" alt="AI-generated back-view shot of the gold lehenga on a staircase" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/gold-2.webp" data-cap="AI-generated: gold lehenga, detail"><span class="tag ai">AI shot</span><img src="images/gold-2.webp" alt="AI-generated detail shot of the gold lehenga blouse and drape" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/gold-3.webp" data-cap="AI-generated: gold lehenga, stone wall"><span class="tag ai">AI shot</span><img src="images/gold-3.webp" alt="AI-generated shot of the gold lehenga against a granite wall" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/gold-4.webp" data-cap="AI-generated: gold lehenga, garden"><span class="tag ai">AI shot</span><img src="images/gold-4.webp" alt="AI-generated shot of the gold lehenga in a garden" width="900" height="1612" loading="lazy"></button>
+        </div>
+      </div>
+
+      <!-- PURPLE -->
+      <div class="set">
+        <div class="set-head"><h4>Purple organza saree</h4><span>1 original → 2 shots</span></div>
+        <div class="rail">
+          <button class="shot orig" data-full="images/purple-original.webp" data-cap="Original product photo: purple organza saree">
+            <span class="tag">Original</span>
+            <img src="images/purple-original.webp" alt="Original product photo of a purple organza saree" width="900" height="1349" loading="lazy">
+            <div class="cap">Original product photo</div>
+          </button>
+          <button class="shot" data-full="images/purple-6.webp" data-cap="AI-generated: purple saree, waterfall"><span class="tag ai">AI shot</span><img src="images/purple-6.webp" alt="AI-generated shot of the purple saree by a waterfall" width="900" height="1612" loading="lazy"></button>
+          <button class="shot" data-full="images/purple-7.webp" data-cap="AI-generated: purple saree, warm light"><span class="tag ai">AI shot</span><img src="images/purple-7.webp" alt="AI-generated portrait of the purple saree in warm window light" width="900" height="1612" loading="lazy"></button>
+        </div>
+      </div>
+
+      <p class="hint" style="margin-top:18px">Swipe sideways inside a set to see more.</p>
+
+      <p class="more"><b>Jewellery, skincare, pickles, candles and gift boxes too.</b> Ask on WhatsApp and I'll make a sample for your category.</p>
     </div>
   </section>
 
-  <div class="cta">
-    <h2>The first one is free.</h2>
-    <p class="sub">I'll make one ad for your product at no cost and with nothing attached. If it earns a place in your feed, the next ones are paid. If it doesn't, delete it and we're done.</p>
-    <a class="btn" href="mailto:sreevidhyakeshava@gmail.com?subject=Send%20me%20the%20free%20one">Send me a product photo</a>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <h2>What I make</h2>
+      <div class="cards">
+        <div class="card"><h3>Product images</h3><p>Your product on a model or styled in a scene. Sarees, jewellery, skincare, food, candles.</p></div>
+        <div class="card"><h3>Short reels</h3><p>8–10 second vertical reels made from approved images, ready for Instagram, Reels and ads.</p></div>
+        <div class="card"><h3>Festive sets</h3><p>Diwali and Navratri looks for your catalogue and gifting range, ready before the rush.</p></div>
+        <div class="card"><h3>Monthly content</h3><p>A steady batch of images and reels every week, if you want fresh content on a schedule.</p></div>
+      </div>
+      <p class="hint" style="margin-top:14px">Tell me what you sell and how many products. I'll send you a quote on WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><span>01</span><p>You send a clear photo of your product on WhatsApp, and one line about who it's for.</p></div>
+        <div class="step"><span>02</span><p>I make a first shot from your own product so you can see it before anything else.</p></div>
+        <div class="step"><span>03</span><p>You pick what you like. I deliver the full set, with 2 rounds of changes included.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REEL -->
+  <section id="reel">
+    <div class="wrap">
+      <h2>Reels too</h2>
+      <p class="sub">A 27-second sample reel, made without a camera, a crew or a location.</p>
+      <div class="reel">
+        <div>
+          <video src="reel.mp4" poster="poster.jpg" controls playsinline preload="none"></video>
+        </div>
+        <ul class="trust" style="flex-direction:column;margin-top:0;gap:10px;font-size:16px">
+          <li>Same face in every shot</li>
+          <li>Real camera moves, not a slideshow</li>
+          <li>Built for 9:16 from the start</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="wrap">
+    <div class="cta" id="contact">
+      <h2>Want to see your own product like this?</h2>
+      <p class="sub">Send me one photo on WhatsApp. I'll make a sample from it so you can decide.</p>
+      <div class="btns">
+        <a class="btn wa" href="https://wa.me/917483870039?text=Hi%20Aura%20Studio%2C%20I%20saw%20your%20work.%20I%27d%20like%20a%20sample%20for%20my%20products." target="_blank" rel="noopener">Message me on WhatsApp</a>
+        <a class="btn ghost" href="mailto:sreevidhyakeshava@gmail.com?subject=Aura%20Studio%20sample">Email instead</a>
+      </div>
+      <p class="contact">WhatsApp: <a href="https://wa.me/917483870039" target="_blank" rel="noopener">+91 74838 70039</a> · All images on this page are AI-generated from the original product photos shown.</p>
+    </div>
+    <footer>Aura Studio · product images and reels for Indian sellers and brands.</footer>
   </div>
 
-  <footer>Aura Studio · cinematic video ads, made without a shoot.</footer>
+</main>
 
-</div>
+<a class="btn wa fab" href="https://wa.me/917483870039?text=Hi%20Aura%20Studio%2C%20I%20saw%20your%20work.%20I%27d%20like%20a%20sample%20for%20my%20products." target="_blank" rel="noopener" aria-label="Message on WhatsApp">WhatsApp</a>
+
+<dialog id="lb" aria-label="Image viewer">
+  <div class="lb">
+    <button class="x" aria-label="Close" id="lbx">✕</button>
+    <img id="lbimg" alt="">
+    <p id="lbcap"></p>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var d=document.getElementById('lb'),img=document.getElementById('lbimg'),cap=document.getElementById('lbcap');
+  if(!d||!d.showModal){return;}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.shot');
+    if(b){img.src=b.dataset.full;img.alt=b.dataset.cap||'';cap.textContent=b.dataset.cap||'';d.showModal();return;}
+    if(e.target===d||e.target.id==='lbx'||e.target.closest('#lbx')){d.close();}
+  });
+  d.addEventListener('click',function(e){if(e.target===d||e.target.classList.contains('lb')){d.close();}});
+})();
+</script>
 </body>
 </html>
